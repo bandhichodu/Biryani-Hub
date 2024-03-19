@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg Items - Biryani Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Navigation bar styles */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        /* Login and Sign Up buttons */
+        .login-signup {
+            float: right;
+            padding: 15px;
+        }
+        /* Main content styles */
+        .content {
+            padding: 20px;
+            /* background-image: url('https://thumbs.dreamstime.com/b/dark-rustic-aged-wooden-food-background-cutlery-seasoning-top-view-copy-space-your-design-recipes-menu-meal-text-123006922.jpg'); */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        /* Search bar styles */
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-container input[type=text] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            transition: width 0.4s ease-in-out;
+        }
+        .search-container input[type=text]:focus {
+            width: 80%;
+        }
+        /* Veg items list styles */
+        .veg-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .veg-item img {
+            width: 100%;
+            height: auto;
+        }
+        .veg-item-content {
+            padding: 15px;
+        }
+        .veg-item-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .veg-item-price {
+            font-size: 16px;
+            color: #4CAF50; /* Green color for price */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<div class="navbar">
+    <a href="veg.html">Veg Items</a>
+    <a href="nonveg.html">Non Veg Items</a>
+    <a href="drinks.html">Drinks</a>
+    <!-- <a href="#">About Us</a> -->
+    <div class="login-signup">
+        <button onclick="location.href='login-1.html'">Login</button>
+        <button onclick="location.href='login-2.html'">Sign Up</button>
+        <button onclick="location.href='admin.html'">Admin login</button>
+    </div>
+</div>
+
+<!-- Main content -->
+<div class="content">
+    <!-- Search bar -->
+    <div class="search-container">
+        <form action="nv-view.php" method="post">
+            <input type="text" placeholder="Search for NON-veg items..." name="nv">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <center>
+        click the below button In order to view all the list of Non-veg items
+        <form action="v-nonveg-item.php" method="post">
+            <input type="submit" name="veg-item" value="view all">
+        </form>
+    </center>
+
+    <!-- Add more veg items as needed -->
+
+</div>
+
+</body>
+</html>
