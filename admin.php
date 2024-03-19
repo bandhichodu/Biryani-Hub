@@ -134,6 +134,11 @@ if($uname=='venkat' && $pass=="1234")
 
 <br><br>
         <h2><center>For new Entries click below <a href="registration.html">link</a></center></h2>
+<br><br>
+
+        <h2><center>to view number of registrations click the below button <br><br>
+            <form action="database.php" method='post'><input type="submit" value='view'></form>
+        </center></h2>
         <?php
 
 
