@@ -8,6 +8,24 @@ $item=$_POST['item'];
 $price=$_POST['price'];
 $addr=$_POST['address'];
 
+$servername='localhost';
+$username='root';
+$password='';
+$dbname='biryani';
+
+$conn=mysqli_connect($servername,$username,$password,$dbname);
+
+if(!$conn)
+{
+    die("connection failed :".mysqli_connect_error());
+}
+
+$sql="INSERT INTO booking (name,email,item,price,address) VALUES ('$name','$email','$item','$price','$addr')";
+
+
+$result=mysqli_query($conn,$sql);
+
+
 ?>
 <html>
     <body>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2024 at 07:18 PM
+-- Generation Time: Mar 25, 2024 at 03:22 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -24,6 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `booking`
+--
+
+CREATE TABLE `booking` (
+  `name` varchar(30) DEFAULT NULL,
+  `email` varchar(20) NOT NULL,
+  `item` varchar(30) NOT NULL,
+  `price` int(11) NOT NULL,
+  `address` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`name`, `email`, `item`, `price`, `address`) VALUES
+('kumar', 'kumar@gmail.com', '7 up', 30, 'vijayawada'),
+('nikhil', 'nikhil@gmail.com', 'prawn biryani', 350, 'vijayawada'),
+('pranav', 'pranav@gmail.com', 'mazaa', 25, 'mylavaram');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `drinks`
 --
 
@@ -39,7 +62,8 @@ CREATE TABLE `drinks` (
 INSERT INTO `drinks` (`Item`, `price`) VALUES
 ('pepsi', 20),
 ('mazaa', 25),
-('7 up', 30);
+('7 up', 30),
+('string', 10);
 
 -- --------------------------------------------------------
 

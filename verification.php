@@ -30,7 +30,8 @@ if(mysqli_num_rows($result)==0)
 }
 else
 {
-    setcookie("username",$email,time()+3600,'/',"",0);
+    setcookie("username","$email",time()+3600,'/',"",0);
+    echo "cookie created";
     include("home.html");
 
 }

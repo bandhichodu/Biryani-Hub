@@ -1,5 +1,8 @@
 <?php
 
+if (isset($_COOKIE['username']))
+{
+    
 include('links.html');
 $dri=$_POST['drink'];
 
@@ -44,6 +47,18 @@ while($row=mysqli_fetch_assoc($result))
 }
 
 }
+
+}
+else
+{
+    ?>
+    <script>alert("pls login first");
+    </script>
+    <?php
+    include("login-1.html");
+}
+
+
 
 
 ?>

@@ -1,6 +1,8 @@
 
 <?php
-
+if (isset($_COOKIE['username']))
+{
+    
 include("links.html");
 
 $servername='localhost';
@@ -36,5 +38,15 @@ $result=mysqli_query($conn,$sql);
         </tr>
         <?php
     }
+}
+else
+{
+    ?><script>
+        alert("pls login first");
+        </script>
+        <?php
+        include("login-1.html");
+
+}
 
 ?>
